@@ -7,4 +7,18 @@
         <attr name="shadow_color" format="color"/>
         <attr name="text" format="string"/>
     </declare-styleable>
+
+
+    <!-- Icon font -->
+    <declare-styleable name="IconFontTextView">
+        <attr name="bgSize" format="dimension" />
+        <attr name="bgColor" format="color" />
+        <attr name="bgShape">
+            <enum name="oval" value="0" />
+            <enum name="rectangle" value="1" />
+        </attr>
+        <attr name="strokeColor" format="color" />
+        <attr name="strokeWidth" format="float" />
+    </declare-styleable>
+
 </resources>

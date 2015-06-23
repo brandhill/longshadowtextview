@@ -3,16 +3,38 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:background="#f08"
+    android:orientation="vertical">
 
     <com.shamanland.longshadowtextview.LongShadowTextView
         android:id="@+id/logo"
         android:layout_width="match_parent"
         android:layout_height="120dp"
-        app:text_size="40sp"
-        app:text_color="@color/yellow"
         app:shadow_color="@color/dkgray"
         app:text="hello world!"
-        android:background="#f08"/>
+        app:text_color="@color/yellow"
+        app:text_size="40sp"/>
 
+
+    <com.shamanland.longshadowtextview.IconFontLongShadowTextView
+        android:id="@+id/icon_font_logo"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        app:shadow_color="@color/dkgray"
+        app:text="@string/iconfont_download"
+        app:text_color="@color/yellow"
+        app:text_size="40sp"/>
+
+    <!--<com.shamanland.longshadowtextview.IconFontTextView-->
+        <!--android:id="@+id/confirmed_check_box"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="120dp"-->
+        <!--android:layout_gravity="center_vertical"-->
+        <!--android:gravity="center"-->
+        <!--android:text="1234"-->
+        <!--android:textColor="@color/yellow"-->
+        <!--android:textSize="56dp"/>-->
+
+
+    <!--android:text="@string/iconfont_download"-->
 </LinearLayout>

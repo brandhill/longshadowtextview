@@ -14,6 +14,9 @@ public class MainActivity extends Activity {
 
         LongShadowTextView logo = (LongShadowTextView) findViewById(R.id.logo);
 
+        IconFontLongShadowTextView logo2 = (IconFontLongShadowTextView) findViewById(R.id.icon_font_logo);
+
+
         //setParams(logo);
     }
 

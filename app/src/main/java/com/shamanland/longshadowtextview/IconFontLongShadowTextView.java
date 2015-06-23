@@ -11,15 +11,13 @@ import android.graphics.RectF;
 import android.graphics.Typeface;
 import android.text.TextUtils;
 import android.util.AttributeSet;
-import android.view.View;
 import android.widget.TextView;
 
-public class LongShadowTextView extends TextView {
+public class IconFontLongShadowTextView extends TextView {
+    private static final String TAG = IconFontLongShadowTextView.class.getSimpleName();
     public static final float DEFAULT_TEXT_SIZE = 20;
     public static final int DEFAULT_SHADOW_COLOR = Color.BLACK;
     public static final int DEFAULT_TEXT_COLOR = Color.GRAY;
-
-    private static final String DEFAULT_FONT = "CMS_IconFonts.ttf";
 
     // configurable fields
     private String mText;
@@ -34,30 +32,46 @@ public class LongShadowTextView extends TextView {
     private Rect mSrc;
     private RectF mDst;
 
-    public LongShadowTextView(Context context) {
+    private static final String DEFAULT_FONT = "CMS_IconFonts.ttf";
+
+    public IconFontLongShadowTextView(Context context) {
         this(context, null, 0);
     }
 
-    public LongShadowTextView(Context context, AttributeSet attrs) {
+    public IconFontLongShadowTextView(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public LongShadowTextView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public IconFontLongShadowTextView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        init(attrs);
+        init(attrs, defStyleAttr);
     }
 
-    private void init(AttributeSet attrs) {
-        if (attrs != null) {
-            TypedArray a = getContext().obtainStyledAttributes(attrs, R.styleable.LongShadowTextView);
-            mTextSize = (int) a.getDimension(R.styleable.LongShadowTextView_text_size, DEFAULT_TEXT_SIZE);
-            mTextColor = a.getColor(R.styleable.LongShadowTextView_text_color, DEFAULT_TEXT_COLOR);
-            mShadowColor = a.getColor(R.styleable.LongShadowTextView_shadow_color, DEFAULT_SHADOW_COLOR);
-            mText = a.getString(R.styleable.LongShadowTextView_text);
+    private void init(AttributeSet attrs, int defStyleAttr) {
+        TypedArray a = getContext().obtainStyledAttributes(attrs, R.styleable.LongShadowTextView, defStyleAttr, 0);
+
+        try {
+            if (attrs != null) {
+
+                mTextSize = (int) a.getDimension(R.styleable.LongShadowTextView_text_size, DEFAULT_TEXT_SIZE);
+                mTextColor = a.getColor(R.styleable.LongShadowTextView_text_color, DEFAULT_TEXT_COLOR);
+                mShadowColor = a.getColor(R.styleable.LongShadowTextView_shadow_color, DEFAULT_SHADOW_COLOR);
+                mText = a.getString(R.styleable.LongShadowTextView_text);
+
+
+            }
+
+            setTypeface();
+            refresh();
+
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
             a.recycle();
         }
-        setTypeface();
-        refresh();
+
     }
 
     private void setTypeface() {
@@ -68,12 +82,9 @@ public class LongShadowTextView extends TextView {
                     setTypeface(font);
                 }
             } catch (Exception e) {
+                e.printStackTrace();
             }
         }
-    }
-
-    public void refreshTypeface() {
-        setTypeface();
     }
 
     public String getText() {
@@ -145,6 +156,7 @@ public class LongShadowTextView extends TextView {
             mDst = new RectF();
         }
 
+        mPaint.setTypeface(getTypeface());
         mPaint.setColor(mShadowColor);
         mPaint.setTextSize(mTextSize);
 
@@ -157,7 +169,7 @@ public class LongShadowTextView extends TextView {
         Bitmap bitmap = Bitmap.createBitmap(mTextBounds.width() + 2 * mTextBounds.height(), mTextBounds.height(), Bitmap.Config.ARGB_8888);
         Canvas canvas = new Canvas(bitmap);
 
-        canvas.drawText(mText, 0, mTextBounds.height(), mPaint);
+        canvas.drawText(mText, 0, mTextBounds.height() +12, mPaint);
 
         Rect src = new Rect();
         RectF dst = new RectF();
@@ -168,7 +180,7 @@ public class LongShadowTextView extends TextView {
         src.left = 0;
         src.right = w;
 
-        for (int i = 0; i < h; ++i) {
+        for (int i = 0; i < h; i++) {
             src.top = i;
             src.bottom = i + 1;
 
@@ -211,5 +223,6 @@ public class LongShadowTextView extends TextView {
 
         mPaint.setColor(mTextColor);
         canvas.drawText(mText, offsetX, offsetY - mTextBounds.top, mPaint);
+
     }
 }
