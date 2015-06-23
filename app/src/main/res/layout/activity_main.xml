@@ -25,15 +25,15 @@
         app:text_color="@color/yellow"
         app:text_size="40sp"/>
 
-    <!--<com.shamanland.longshadowtextview.IconFontTextView-->
-        <!--android:id="@+id/confirmed_check_box"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="120dp"-->
-        <!--android:layout_gravity="center_vertical"-->
-        <!--android:gravity="center"-->
-        <!--android:text="1234"-->
-        <!--android:textColor="@color/yellow"-->
-        <!--android:textSize="56dp"/>-->
+    <com.shamanland.longshadowtextview.IconFontTextView
+        android:id="@+id/confirmed_check_box"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:text="@string/iconfont_download"
+        android:textColor="@color/yellow"
+        android:textSize="56dp"/>
 
 
     <!--android:text="@string/iconfont_download"-->
