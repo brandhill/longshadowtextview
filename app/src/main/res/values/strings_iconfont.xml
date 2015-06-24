@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!-- 請注意  若要新增iconfont請一併看下方的array宣告 -->
+<!-- 請注意  若要新增iconfont請一併看下方的array宣告 -->
+<!-- 請注意  若要新增iconfont請一併看下方的array宣告 -->
+<!-- 請注意  若要新增iconfont請一併看下方的array宣告 -->
+<!-- 請注意  若要新增iconfont請一併看下方的array宣告 -->
+<!-- 請注意  若要新增iconfont請一併看下方的array宣告 -->
+<!-- 請注意  若要新增iconfont請一併看下方的array宣告 -->
+<resources>
+    <string name="iconfont_scheduledscan">\uE62D</string>
+	<string name="iconfont_alertcircle">\uE62E</string>
+    <string name="iconfont_export">\uE62B</string>
+    <string name="iconfont_cloud">\uE62C</string>
+    <string name="iconfont_checkbox_marked">\uE629</string>
+    
+    <string name="iconfont_checkbox_blank_outline">\uE62A</string>
+	<string name="iconfont_closecircle">\uE628</string>
+    <string name="iconfont_rocket">\uE61F</string>
+    <string name="iconfont_cooler">\uE626</string>
+    <string name="iconfont_vacuumcleaner">\uE627</string>
+    
+    <string name="iconfont_powerstatus">\uE621</string>
+    <string name="iconfont_suspiciousfill">\uE622</string>
+    <string name="iconfont_suspicious">\uE623</string>
+    <string name="iconfont_arrowup">\uE624</string>
+    <string name="iconfont_clipboard">\uE625</string>
+    
+    <string name="iconfont_star">\uE64</string>
+    <string name="iconfont_heart">\uE63</string>
+    <string name="iconfont_edit">\uE62</string>
+    <string name="iconfont_alert">\uE61A</string>
+    <string name="iconfont_tips2">\uE61B</string>
+    
+    <string name="iconfont_check">\uE61C</string>
+    <string name="iconfont_back2">\uE61D</string>
+    <string name="iconfont_add">\uE61E</string>
+    <string name="iconfont_image">\uE620</string>
+	<string name="iconfont_close">\uE619</string>
+	
+	<string name="iconfont_back">\uE616</string>
+    <string name="iconfont_tips">\uE617</string>
+	<string name="iconfont_theme">\uE618</string>
+	<string name="iconfont_questionfill">\uE613</string>
+	<string name="iconfont_trustfill">\uE614</string>
+	
+    <string name="iconfont_question">\uE615</string>
+    <string name="iconfont_trust">\uE612</string>
+    <string name="iconfont_unlock">\uE611</string>
+	<string name="iconfont_lock">\uE610</string>
+	<string name="iconfont_bluetooth">\uE60E</string>
+
+	<string name="iconfont_recentapp">\uE60F</string>
+    <string name="iconfont_trackpicvideo">\uE607</string>
+	<string name="iconfont_account_circle">\uE608</string>
+	<string name="iconfont_device">\uE609</string>
+    <string name="iconfont_contacts">\uE60A</string>
+    
+	<string name="iconfont_track_info">\uE60B</string>
+    <string name="iconfont_message">\uE60C</string>	
+    <string name="iconfont_phone">\uE60D</string>
+    <string name="iconfont_datausage">\uE600</string>	
+    <string name="iconfont_incomingcall">\ue601</string>
+
+    <string name="iconfont_menu">\uE602</string>    
+    <string name="iconfont_search">\uE603</string>
+    <string name="iconfont_systemLock">\uE604</string>
+    <string name="iconfont_uninstall">\uE605</string>
+    <string name="iconfont_wifi">\uE606</string>
+    
+    <string name="iconfont_right_circle">\uE62F</string>
+    <string name="iconfont_cloudimg">\uE630</string>
+    <string name="iconfont_shopping">\uE631</string>
+    <string name="iconfont_shopping_thin">\uE632</string>
+    <string name="iconfont_locatefamily">\uE633</string>
+
+    <string name="iconfont_callblock">\uE634</string>
+    <string name="iconfont_findphone">\uE635</string>
+    <string name="iconfont_sdcard">\uE636</string>
+    <string name="iconfont_menu_home">\uE637</string>
+    <string name="iconfont_update">\uE638</string>
+    <string name="iconfont_apk_update">\uE643</string>
+    <string name="iconfont_cog">\uE639</string>
+    
+    <string name="iconfont_safebrowsing">\uE63a</string>
+    <string name="iconfont_privatebrowsing">\uE63b</string>
+    <string name="iconfont_forward">\uE63c</string>
+    <string name="iconfont_callhistory">\uE63d</string>
+    <string name="iconfont_sms">\uE63e</string>
+    <string name="iconfont_sys_lock">\uE63f</string>
+    <string name="iconfont_chargingscreen">\uE641</string>
+
+    <string name="iconfont_upgrade">\uE643</string>
+    <string name="iconfont_cmbkp">\uE644</string>
+    <string name="iconfont_wifi_protection">\uE645</string>
+    <string name="iconfont_alert_octagon">\uE646</string>
+    <string name="iconfont_bullet_point">\uE647</string>
+    <string name="iconfont_cm_locker">\uE649</string>
+    <string name="iconfont_cm_launcher">\uE648</string>
+
+    <string name="iconfont_skull">\uE64A</string>
+    <string name="iconfont_alert2">\uE64B</string>
+    <string name="iconfont_cmslogo">\uE64C</string>
+    <string name="iconfont_cms_secretbox_icon_no_issuses_detected">\uE64D</string>
+    <string name="iconfont_cms_secretbox_icon_issuses_detected">\uE64E</string>
+    <string name="iconfont_arrowdown">\uE64f</string>
+    <string name="iconfont_arrow_circle_down">\uE650</string>
+    <string name="iconfont_arrow_circle_up">\uE651</string>
+
+    <string name="iconfont_date">\uE652</string>
+    <string name="iconfont_deadwifi">\uE653</string>
+    <string name="iconfont_unlocktransfering">\uE654</string>
+    <string name="iconfont_wifisslrisk">\uE655</string>
+    <string name="iconfont_help_circle">\uE656</string>
+    <string name="iconfont_checkbox_marked_circle">\uE657</string>
+    <string name="iconfont_arrow_right">\uE658</string>
+    <string name="iconfont_arrow_down">\uE64F</string>
+    <string name="iconfont_checkbox_marked_outline">\uE65d</string>
+    <string name="iconfont_alertcircle_outline">\uE65e</string>
+
+    <string name="iconfont_internet">\uE659</string>
+    <string name="iconfont_chat">\uE65a</string>
+    <string name="iconfont_gamepad">\uE65b</string>
+    <string name="iconfont_video">\uE65c</string>
+    <string name="iconfont_imageid_known">\uE660</string>
+    <string name="iconfont_imageid_unknown">\uE661</string>
+
+    <string name="iconfont_imageid_span">\uE662</string>
+    <string name="iconfont_imageid_unsure">\uE663</string>
+    <string name="iconfont_wifi_alert">\uE664</string>
+
+    <string name="iconfont_half_face">\uE665</string>
+
+    <string name="iconfont_handup">\uE666</string>
+    <string name="iconfont_block">\uE667</string>
+    <string name="iconfont_fingerprint">\uE668</string>
+
+    <string name="iconfont_stop_sign">\uE65f</string>
+    <string name="iconfont_speedtest">\uE669</string>
+    <string name="iconfont_download">\uE66a</string>
+
+    <string name="iconfont_restore">\uE66b</string>
+    <string name="iconfont_k2_arrowdown">\uE66c</string>
+    <string name="iconfont_unknowncall">\uE66e</string>
+
+    <string name="iconfont_facebook">\uE66D</string>
+    <string name="iconfont_wifi_signal_1">\uE66F</string>
+    <string name="iconfont_wifi_signal_2">\uE670</string>
+    <string name="iconfont_wifi_signal_3">\uE671</string>
+    <string name="iconfont_wifi_signal_4">\uE672</string>
+
+    <string name="iconfont_hot_appmarket">\uE674</string>
+
+    <string name="iconfont_numberpad_delete">\uE676</string>
+
+    <string name="iconfont_arrowup2">\uE678</string>
+    <string name="iconfont_hand">\uE679</string>
+    <string name="iconfont_k4_app_invite">\uE67A</string>
+    <string name="iconfont_lowbattery">\uE67B</string>
+    <string name="iconfont_wifi_powersaving">\uE67C</string>
+    <string name="iconfont_rocket_smoke">\uE67E</string>
+
+    <string name="iconfont_alarm">\uE682</string>
+    <string name="iconfont_arrow_s_right">\uE683</string>
+    <string name="iconfont_rocket_cloud_inner">\uE684</string>
+    <string name="iconfont_rocket_cloud_outer">\uE685</string>
+    <string name="iconfont_rocket_fly">\uE686</string>
+    <string name="iconfont_k5_hide_track">\uE67D</string>
+    <string name="iconfont_star_full">\uE67f</string>
+    <string name="iconfont_star_empty">\uE680</string>
+    <string name="iconfont_star_half">\uE681</string>
+
+    <string name="iconfont_imageid_spamcall">\uE687</string>
+    <string name="iconfont_imageid_sales">\uE688</string>
+    <string name="iconfont_imageid_harassment">\uE689</string>
+    <string name="iconfont_imageid_express">\uE68a</string>
+    <string name="iconfont_imageid_callcenter">\uE68b</string>
+
+
+    <!-- 新增iconfont時請一定要對應在這邊新增一個項目 照順序排比較好維護-->
+    <string-array name="iconfont_lists">
+        <item>iconfont_account_circle</item>
+        <item>iconfont_add</item>
+        <item>iconfont_alert</item>
+        <item>iconfont_alert2</item>
+        <item>iconfont_alertcircle</item>
+        <item>iconfont_alertcircle_outline</item>
+        <item>iconfont_alert_octagon</item>
+        <item>iconfont_arrowup</item>
+        <item>iconfont_back</item>
+        <item>iconfont_back2</item>
+        <item>iconfont_block</item>
+        <item>iconfont_fingerprint</item>
+        <item>iconfont_bluetooth</item>
+        <item>iconfont_bullet_point</item>
+        <item>iconfont_callblock</item>
+        <item>iconfont_callhistory</item>
+        <item>iconfont_chargingscreen</item>
+        <item>iconfont_check</item>
+        <item>iconfont_checkbox_blank_outline</item>
+        <item>iconfont_checkbox_marked</item>
+        <item>iconfont_checkbox_marked_circle</item>
+        <item>iconfont_checkbox_marked_outline</item>
+        <item>iconfont_clipboard</item>
+        <item>iconfont_close</item>
+        <item>iconfont_closecircle</item>
+        <item>iconfont_cloud</item>
+        <item>iconfont_cloudimg</item>
+        <item>iconfont_cmbkp</item>
+        <item>iconfont_cmslogo</item>
+        <item>iconfont_cms_secretbox_icon_no_issuses_detected</item>
+        <item>iconfont_cms_secretbox_icon_issuses_detected</item>
+        <item>iconfont_arrowdown</item>
+        <item>iconfont_cog</item>
+        <item>iconfont_contacts</item>
+        <item>iconfont_cooler</item>
+        <item>iconfont_datausage</item>
+        <item>iconfont_date</item>
+        <item>iconfont_deadwifi</item>
+        <item>iconfont_device</item>
+        <item>iconfont_download</item>
+        <item>iconfont_edit</item>
+        <item>iconfont_export</item>
+        <item>iconfont_facebook</item>
+        <item>iconfont_findphone</item>
+        <item>iconfont_forward</item>
+        <item>iconfont_handup</item>
+        <item>iconfont_heart</item>
+        <item>iconfont_help_circle</item>
+        <item>iconfont_image</item>
+        <item>iconfont_imageid_callcenter</item>
+        <item>iconfont_imageid_express</item>
+        <item>iconfont_imageid_harassment</item>
+        <item>iconfont_imageid_known</item>
+        <item>iconfont_imageid_sales</item>
+        <item>iconfont_imageid_spamcall</item>
+        <item>iconfont_imageid_span</item>
+        <item>iconfont_imageid_unknown</item>
+        <item>iconfont_imageid_unsure</item>
+        <item>iconfont_incomingcall</item>
+        <item>iconfont_locatefamily</item>
+        <item>iconfont_lock</item>
+        <item>iconfont_lowbattery</item>
+        <item>iconfont_menu</item>
+        <item>iconfont_menu_home</item>
+        <item>iconfont_message</item>
+        <item>iconfont_phone</item>
+        <item>iconfont_powerstatus</item>
+        <item>iconfont_privatebrowsing</item>
+        <item>iconfont_question</item>
+        <item>iconfont_questionfill</item>
+        <item>iconfont_recentapp</item>
+        <item>iconfont_restore</item>
+        <item>iconfont_right_circle</item>
+        <item>iconfont_rocket</item>
+        <item>iconfont_rocket_cloud_inner</item>
+        <item>iconfont_rocket_cloud_outer</item>
+        <item>iconfont_rocket_fly</item>
+        <item>iconfont_rocket_smoke</item>
+        <item>iconfont_safebrowsing</item>
+        <item>iconfont_scheduledscan</item>
+        <item>iconfont_sdcard</item>
+        <item>iconfont_search</item>
+        <item>iconfont_shopping</item>
+        <item>iconfont_shopping_thin</item>
+        <item>iconfont_skull</item>
+        <item>iconfont_sms</item>
+        <item>iconfont_speedtest</item>
+        <item>iconfont_star</item>
+        <item>iconfont_suspicious</item>
+        <item>iconfont_suspiciousfill</item>
+        <item>iconfont_sys_lock</item>
+        <item>iconfont_systemLock</item>
+        <item>iconfont_theme</item>
+        <item>iconfont_tips</item>
+        <item>iconfont_tips2</item>
+        <item>iconfont_track_info</item>
+        <item>iconfont_trackpicvideo</item>
+        <item>iconfont_trust</item>
+        <item>iconfont_trustfill</item>
+        <item>iconfont_uninstall</item>
+        <item>iconfont_unknowncall</item>
+        <item>iconfont_unlock</item>
+        <item>iconfont_unlocktransfering</item>
+        <item>iconfont_update</item>
+        <item>iconfont_upgrade</item>
+        <item>iconfont_vacuumcleaner</item>
+        <item>iconfont_wifi</item>
+        <item>iconfont_wifi_alert</item>
+        <item>iconfont_wifi_powersaving</item>
+        <item>iconfont_wifi_protection</item>
+        <item>iconfont_wifi_signal_1</item>
+        <item>iconfont_wifi_signal_2</item>
+        <item>iconfont_wifi_signal_3</item>
+        <item>iconfont_wifi_signal_4</item>
+        <item>iconfont_wifisslrisk</item>
+        <item>iconfont_cm_locker</item>
+        <item>iconfont_cm_launcher</item>
+        <item>iconfont_arrow_circle_down</item>
+        <item>iconfont_arrow_circle_up</item>
+        <item>iconfont_arrow_right</item>
+        <item>iconfont_arrow_down</item>
+        <item>iconfont_internet</item>
+        <item>iconfont_chat</item>
+        <item>iconfont_gamepad</item>
+        <item>iconfont_video</item>
+        <item>iconfont_half_face</item>
+        <item>iconfont_stop_sign</item>
+        <item>iconfont_k2_arrowdown</item>
+        <item>iconfont_numberpad_delete</item>
+        <item>iconfont_arrowup2</item>
+        <item>iconfont_hand</item>
+        <item>iconfont_k4_app_invite</item>
+        <item>iconfont_k5_hide_track</item>
+        <item>iconfont_star_full</item>
+        <item>iconfont_star_empty</item>
+        <item>iconfont_star_half</item>
+        <item>iconfont_alarm</item>
+        <item>iconfont_arrow_s_right</item>
+    </string-array>
+</resources>

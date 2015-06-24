@@ -5,6 +5,7 @@
         <attr name="text_size" format="dimension"/>
         <attr name="text_color" format="color"/>
         <attr name="shadow_color" format="color"/>
+        <attr name="clipRadius" format="dimension"/>
         <attr name="text" format="string"/>
     </declare-styleable>
 

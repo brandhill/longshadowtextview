@@ -12,6 +12,7 @@ import android.graphics.drawable.shapes.RoundRectShape;
 import android.text.TextPaint;
 import android.text.TextUtils;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.widget.TextView;
 
 
@@ -69,6 +70,8 @@ public class IconFontTextView extends TextView {
             mStrokePaint.setTextSize(getTextSize());
             mStrokePaint.setTypeface(getTypeface());
             mStrokePaint.setFlags(getPaintFlags());
+
+            Log.d(TAG, "getTextSize() : " + getTextSize());
 
             // custom
             try {

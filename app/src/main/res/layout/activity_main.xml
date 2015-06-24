@@ -20,10 +20,12 @@
         android:id="@+id/icon_font_logo"
         android:layout_width="match_parent"
         android:layout_height="120dp"
+        android:textColor="@color/yellow"
+        android:textSize="50dp"
         app:shadow_color="@color/dkgray"
-        app:text="@string/iconfont_download"
-        app:text_color="@color/yellow"
-        app:text_size="40sp"/>
+        app:clipRadius="30dp"
+        app:text="@string/iconfont_tips2"
+        />
 
     <com.shamanland.longshadowtextview.IconFontTextView
         android:id="@+id/confirmed_check_box"
