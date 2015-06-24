@@ -6,6 +6,8 @@ import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
 import android.graphics.RectF;
 import android.graphics.Typeface;
@@ -18,6 +20,7 @@ public class IconFontLongShadowTextView extends TextView {
     public static final float DEFAULT_TEXT_SIZE = 20;
     public static final int DEFAULT_SHADOW_COLOR = Color.BLACK;
     public static final int DEFAULT_TEXT_COLOR = Color.GRAY;
+    private final int defaultBgColor = Color.parseColor("#dc552c");
 
     // configurable fields
     private String mText;
@@ -31,6 +34,10 @@ public class IconFontLongShadowTextView extends TextView {
     private Rect mTextBounds;
     private Rect mSrc;
     private RectF mDst;
+    private Paint mTransparentPaint;
+
+    private float mCircleMaskRadius ;
+
 
     private static final String DEFAULT_FONT = "CMS_IconFonts.ttf";
 
@@ -48,6 +55,10 @@ public class IconFontLongShadowTextView extends TextView {
     }
 
     private void init(AttributeSet attrs, int defStyleAttr) {
+
+        // 若不設定則透明的部分會變成黑色
+        setLayerType(LAYER_TYPE_SOFTWARE, null);
+
         TypedArray a = getContext().obtainStyledAttributes(attrs, R.styleable.LongShadowTextView, defStyleAttr, 0);
 
         try {
@@ -57,14 +68,12 @@ public class IconFontLongShadowTextView extends TextView {
                 mTextColor = a.getColor(R.styleable.LongShadowTextView_text_color, DEFAULT_TEXT_COLOR);
                 mShadowColor = a.getColor(R.styleable.LongShadowTextView_shadow_color, DEFAULT_SHADOW_COLOR);
                 mText = a.getString(R.styleable.LongShadowTextView_text);
-
-
             }
 
+            mCircleMaskRadius = 60f;
             setTypeface();
-            refresh();
 
-
+            initFontShadow();
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -97,7 +106,7 @@ public class IconFontLongShadowTextView extends TextView {
         mText = value;
 
         if (changed) {
-            refresh();
+            initFontShadow();
         }
     }
 
@@ -111,7 +120,7 @@ public class IconFontLongShadowTextView extends TextView {
         mTextSize = value;
 
         if (changed) {
-            refresh();
+            initFontShadow();
         }
     }
 
@@ -125,7 +134,7 @@ public class IconFontLongShadowTextView extends TextView {
         mTextColor = value;
 
         if (changed) {
-            refresh();
+            initFontShadow();
         }
     }
 
@@ -139,11 +148,11 @@ public class IconFontLongShadowTextView extends TextView {
         mShadowColor = value;
 
         if (changed) {
-            refresh();
+            initFontShadow();
         }
     }
 
-    public void refresh() {
+    public void initFontShadow() {
         if (mText == null) {
             return;
         }
@@ -193,7 +202,30 @@ public class IconFontLongShadowTextView extends TextView {
         }
 
         mBitmap = bitmap;
+
+        if (mTransparentPaint == null) {
+            mTransparentPaint = new Paint();
+            mTransparentPaint.setColor(Color.WHITE);
+            mTransparentPaint.setXfermode(null);
+            mTransparentPaint.setAntiAlias(true);
+        }
+
+        int size = 0;
+        if(mTextBounds.width() > mTextBounds.height()){
+            size = mTextBounds.width();
+        }else{
+            size = mTextBounds.height();
+        }
+
+        maskBitmap = Bitmap.createBitmap(size * 4, size * 4, Bitmap.Config.ARGB_8888);
+        maskCanvas = new Canvas(maskBitmap);
+        maskCanvas.drawColor(Color.TRANSPARENT);
+        maskCanvas.drawCircle(size, size, size, mTransparentPaint);
+
     }
+
+    Canvas maskCanvas ;
+    Bitmap maskBitmap;
 
     @Override
     public void onDraw(Canvas canvas) {
@@ -205,12 +237,14 @@ public class IconFontLongShadowTextView extends TextView {
         float offsetY = (canvas.getHeight() - mTextBounds.height()) / 2f;
 
         if (mBitmap != null) {
+            // 上方陰影
             canvas.drawBitmap(mBitmap, offsetX, offsetY, null);
 
             mSrc.right = mBitmap.getWidth();
             mSrc.top = mBitmap.getHeight() - 1;
             mSrc.bottom = mBitmap.getHeight();
 
+            // 下方陰影
             for (int x = (int) offsetX + 1, y = (int) (offsetY + mBitmap.getHeight()), h = canvas.getHeight(); y < h; ++x, ++y) {
                 mDst.left = x;
                 mDst.right = x + mBitmap.getWidth();
@@ -224,5 +258,31 @@ public class IconFontLongShadowTextView extends TextView {
         mPaint.setColor(mTextColor);
         canvas.drawText(mText, offsetX, offsetY - mTextBounds.top, mPaint);
 
+        // circle clipping
+        mTransparentPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.DST_IN));
+        canvas.drawBitmap(maskBitmap, canvas.getWidth() / 2  - mTextBounds.width() / 2, canvas.getHeight() / 2 -mTextBounds.height(), mTransparentPaint);
+
+    }
+
+    public Bitmap getCroppedBitmap(Bitmap bitmap) {
+        Bitmap output = Bitmap.createBitmap(bitmap.getWidth(),
+                bitmap.getHeight(), Bitmap.Config.ARGB_8888);
+        Canvas canvas = new Canvas(output);
+
+        final int color = 0xff424242;
+        final Paint paint = new Paint();
+        final Rect rect = new Rect(0, 0, bitmap.getWidth(), bitmap.getHeight());
+
+        paint.setAntiAlias(true);
+        canvas.drawARGB(0, 0, 0, 0);
+        paint.setColor(color);
+        // canvas.drawRoundRect(rectF, roundPx, roundPx, paint);
+        canvas.drawCircle(bitmap.getWidth() / 2, bitmap.getHeight() / 2,
+                bitmap.getWidth() / 2, paint);
+        paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_IN));
+        canvas.drawBitmap(bitmap, rect, rect, paint);
+        //Bitmap _bmp = Bitmap.createScaledBitmap(output, 60, 60, false);
+        //return _bmp;
+        return output;
     }
 }
